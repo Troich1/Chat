@@ -56,7 +56,6 @@ class Client(Thread, *sys.argv[1:]):
             return 1
 
         print("Connecting\n")
-        s = ''
         self.connect(host, port)
         print("Connected\n")
         while 1:
