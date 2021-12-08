@@ -67,7 +67,7 @@ class Client(Thread, *sys.argv[1:]):
         return (1)
 
 
-class Net(Process):
+class Net(Process):  # процесс чата с двумя потоками (сервер и клиент)
 
     def __init__(self, end, port):
         Process.__init__(self)
