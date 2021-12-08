@@ -76,7 +76,7 @@ class Net(Process):
 
     def run(self):
         sys.stdin = open(0)
-        srv = Server(self.end, self.port)  # иницицаия сервера
+        srv = Server(self.end, self.port)  # инициализация сервера
         srv.daemon = True  # ставим его в режим демона для постоянной фоновой работы
         print("Starting server")
         srv.start()  # запускаем
