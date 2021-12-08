@@ -17,7 +17,7 @@ class Server(Thread):
     def run(self):
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         print("Server started successfully\n")
-        hostname = ''
+        hostname = ''  # символическое имя обозначающее все доступные интерфейсы подкл
         port = self.port
         self.sock.bind((hostname, port))
         self.sock.listen(1)
@@ -41,7 +41,7 @@ class Client(Thread, *sys.argv[1:]):
 
     def client(self, host, port, msg, ):
         sent = self.sock.send(bytes(msg, encoding='UTF-8'))
-        buf = self.end.recv()
+        buf = self.end.recv()  # принимаем данные от таймера
         print("YOU " , buf, ':' + msg)
 
     def run(self):
